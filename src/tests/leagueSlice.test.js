@@ -18,10 +18,8 @@ describe('leagueSlice', () => {
 
     const store = mockStore({ league: { data: null, error: null } });
 
-    // Dispatch the fetchMissions action and wait for it to complete
     await store.dispatch(fetchLeagueData());
 
-    // Get the actions that were dispatched to the mock store
     const actions = store.getActions();
 
     // Expectations
@@ -30,5 +28,4 @@ describe('leagueSlice', () => {
     expect(store.getState().league.error).toBeNull();
   });
 
-  // ... other test cases ...
 });
