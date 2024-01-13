@@ -27,5 +27,4 @@ describe('leagueSlice', () => {
     expect(actions[1].type).toEqual(fetchLeagueData.fulfilled.type);
     expect(store.getState().league.error).toBeNull();
   });
-
 });
